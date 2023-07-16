@@ -1,0 +1,25 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div class="card" style="margin: 1.5px;">
+    <div  *ngFor="let holiday of holidays">
+      <p class="name" style="margin: 10px;"><b>{{holiday.name}}</b>:  {{holiday.date}}</p>
+     
+    </div>
+    </div>
+</div>
+    
+
+</body>
+</html>

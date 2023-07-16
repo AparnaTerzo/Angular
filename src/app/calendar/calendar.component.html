@@ -1,0 +1,107 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+       <nav class="navbar navbar-expand-lg nav">
+      <div class="container-fluid">
+        <a class="navbar-brand terzo">
+          <img
+            src="https://images.softwaresuggest.com/software_logo/1674465353_Terzo%20logo.jpg"
+            alt="Logo"
+            width="50"
+            height="45"
+            class="d-inline-block align-top"
+          />
+          TERZO
+        </a>
+
+        <!-- Search Bar -->
+
+        <div style="margin-top: 10px">
+          <h5 type="button">Logout</h5>
+        </div>
+      </div>
+    </nav>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-2">
+        
+       <div style="margin-top: 10px">
+          <p><a href="/employee" style="text-decoration: none; color: rgb(15, 13, 13)"
+            >Employees</a></p>
+        </div>
+      
+        <div style="margin-top: 10px">
+          <p> <a href="/leave" style="text-decoration: none; color: rgb(18, 17, 17)">ApplyLeave</a></p>
+        </div>
+        <div style="margin-top: 10px">
+        <a href="#" style="text-decoration: none; color: rgb(17, 16, 16)">Calendar</a>
+        </div>
+      </div>
+
+    
+    
+    <div class="col-10">
+      <div class="row">
+        <div class="col-12">
+          <div class="card h-20">
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: 30px">Hi </h5>
+            <p class="card-text" id="dateDisplay"></p>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-4">
+           <div class="card h-100" style="background-color: beige;">
+          <div class="card-body">
+            <h4  style="text-align: center">
+              Upcoming Holiday
+            </h4>
+            <p class="card-text">
+              <app-holiday></app-holiday>
+            </p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-4">
+          <div class="card h-100" style="background-color: beige;">
+          <div class="card-body">
+            <h5 class="card-title">Apply Time of</h5>
+            <br />
+
+            <a class="card-link" [routerLink]="['/leave']">Go to ApplyLeave</a>
+            <br />
+            <br />
+          </div>
+        </div>
+        </div>
+         <div class="col-4">
+<div class="card h-100" style="background-color: beige;">
+          <div class="card-body">
+            <h5 class="card-title">Upcoming Time of</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-4">
+          <!-- Sub-row 3 content here -->
+        </div>
+        
+        <div class="col-4">
+          <!-- Sub-row 4 content here -->
+        </div>
+        
+        <div class="col-4">
+          <!-- Sub-row 5 content here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

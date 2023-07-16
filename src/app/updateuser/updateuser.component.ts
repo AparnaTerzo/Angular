@@ -27,7 +27,7 @@ export class UpdateuserComponent implements OnInit {
 
   form = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    employeeId: new FormControl('', [Validators.required]),
+    
     dob: new FormControl('', [Validators.required]),
     doj: new FormControl('', [Validators.required]),
     status: new FormControl('', [Validators.required]),
@@ -37,7 +37,12 @@ export class UpdateuserComponent implements OnInit {
     department: new FormControl('', [Validators.required]),
     designation: new FormControl('', [Validators.required]),
     employeeType: new FormControl('', [Validators.required]),
-    directManager: new FormControl('', [Validators.required])
+    directManager: new FormControl('', [Validators.required]),
+    profileUrl: new FormControl('', [Validators.required]),
+    bloodGroup: new FormControl('', [Validators.required]),
+    gender: new FormControl('', [Validators.required]),
+    placeBorn: new FormControl('', [Validators.required]),
+    collegeName: new FormControl('', [Validators.required])
   })
 
   submit(){
@@ -48,7 +53,7 @@ export class UpdateuserComponent implements OnInit {
       console.log(data)
     })
 
-    this.router.navigate(['/']);
+    this.router.navigate(['employee']);
   }
 
 }

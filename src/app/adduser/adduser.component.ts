@@ -17,7 +17,6 @@ export class AdduserComponent implements OnInit {
   
   form = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    employeeId: new FormControl('', [Validators.required]),
     dob: new FormControl('', [Validators.required]),
     doj: new FormControl('', [Validators.required]),
     status: new FormControl('', [Validators.required]),
@@ -28,7 +27,8 @@ export class AdduserComponent implements OnInit {
     designation: new FormControl('', [Validators.required]),
     employeeType: new FormControl('', [Validators.required]),
     directManager: new FormControl('', [Validators.required]),
-    profileurl: new FormControl('', [Validators.required])
+    profileUrl: new FormControl('', [Validators.required]),
+  
   })
 
   ngOnInit(): void {
@@ -38,14 +38,14 @@ export class AdduserComponent implements OnInit {
   submit(){
     this.data = this.form.value
     console.log(this.data)
-
     this.service.adduser(this.data).subscribe(data => {
       console.log(data)
     })
+    this.router.navigate(['employee']).then(() =>{
+      window.location.reload()
+    });
+  
 
-    
-    
-    this.router.navigate(['/']);
   }
 
 }

@@ -3,6 +3,7 @@ import { EmployeeComponent } from '../employee/employee.component';
 import { AppService } from '../app.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from '../Employee';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-viewuser',
@@ -20,7 +21,14 @@ export class ViewuserComponent {
     this.service.getUserById(id).subscribe(data => {
       this.user = data
       console.log(this.user)
-    })
+    // },error => {
+    //   if (error instanceof HttpErrorResponse && error.status === 403 ) {
+    //     this.router.navigate(['/login'])
+    //     console.error('Expectation Failed:', error.message);
+    //   } else {
+    //     console.error('An error occurred:', error);
+    //   }
+    });
   }
 
 

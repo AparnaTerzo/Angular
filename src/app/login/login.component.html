@@ -1,1 +1,88 @@
-<p>login works!</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+  height: 100vh;
+  background-color: #9A616D;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+padding-top: 10%;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: white;
+ 
+  
+}
+
+.card-body {
+  text-align: center;
+}
+
+.form-outline {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    
+
+
+    <section class="vh-100" style="background-color: #9A616D;">
+        <div class="container mx-auto text-center">
+         
+              <div class="card">
+                 
+                    <div class="card-body p-4 p-lg-5">
+                      <form [formGroup]="form" (ngSubmit)="submit()">
+                        <h1 class="mb-3">Login</h1>
+      
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="email">Email</label>
+                            <input id="email" type="email"  formControlName="email" name="email" class="form-control"  required>
+                          
+                        </div>
+      
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="password">Password</label>
+                            <input id="password" type="password"  formControlName="password" name="password" class="form-control"  required>
+                          
+                        </div>
+      
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                              <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">
+                            </div>
+                          </div>
+                      </form>
+      
+                    </div>
+                  </div>
+             </div>
+             
+          
+      </section>
+</body>
+</html>

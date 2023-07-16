@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Terzo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+
+      </div>
+    </div>
+  </nav>
+
+    
+    <!--Main Content-->
+  
+    <div class="my-5">
+      <div class="mx-auto w-50 ">
+        <h2 class="text-center mb-3">Apply Leave</h2>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <!--startDate-->
+          <div class="row">
+            <div class="col-md-6 form-group mb-3">
+              <label for="startDate" class="form-label">Start Date</label>
+              <input id="startDate"  formControlName="startDate" type="date" name="startDate" class="form-control"  required>
+            </div>
+         
+          <!--EndDate-->
+        
+            <div class="col-md-6 form-group mb-3">
+              <label for="endDate" class="form-label">End Date</label>
+              <input id="endDate" type="date"  formControlName="endDate" name="endDate" class="form-control" placeholder="endDate" required>
+            </div>
+          </div>
+
+          <!--type-->
+          <div class="row">
+            <div class="col-md-6 form-group mb-3">
+              <label for="type" class="form-label">Type of Leave</label>
+              <select class="form-control" id="type" name="type" formControlName="type" required>
+                <option value="">Select</option>
+                <option value="sickleave">Sick Leave</option>
+                <option value="paternityleave">Paternity Leave</option>
+                <option value="earnedleave">Earned Leave</option>
+              </select>
+            </div>
+        
+          <!--note-->
+          
+            <div class="col-md-6 form-group mb-3">
+              <label for="note" class="form-label">Note</label>
+              <input id="note" type="text" name="note"  formControlName="note" class="form-control" required>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">
+            </div>
+          </div>
+
+          <div>
+            
+          </div>
+        </form>
+  
+      </div>
+    </div>
+    
+</body>
+</html>

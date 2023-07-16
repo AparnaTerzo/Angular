@@ -1,6 +1,5 @@
 export interface Employee {
         id:number
-    employeeId : string
     email: string
     name: string
     dob: Date
@@ -11,6 +10,6 @@ export interface Employee {
     department:string
     status:string
     employeeType:string
-    directManager:string
+    directManager:number
     profileUrl:string
 }
